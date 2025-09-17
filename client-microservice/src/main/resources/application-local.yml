@@ -1,0 +1,19 @@
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/bank?useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: hgr
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+kafka:
+  bootstrap-servers: localhost:9092
+  client-id: microclientes
+  consumer-group-id: clientes-group
+
+app:
+  remote:
+    account-service: http://localhost:8081/

@@ -11,7 +11,7 @@ import java.util.List;
 @Mapper(componentModel = "spring", nullValuePropertyMappingStrategy = NullValuePropertyMappingStrategy.IGNORE,uses = {Client.class})
 public interface ClientMapper {
 
-    public ClientResponseDto toClientDto(Client client);
-    public List<ClientResponseDto> toClientDtoList(List<Client> clients);
+     ClientResponseDto toClientDto(Client client);
+     List<ClientResponseDto> toClientDtoList(List<Client> clients);
     void updateClientFromDto(ClientRequestDto dto, @MappingTarget Client entity);
 }

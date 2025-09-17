@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 @FeignClient(name = "accountHttpClient", url = "${app.remote.account-service}")

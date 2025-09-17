@@ -1,19 +1,16 @@
 package com.devsu.client.controller;
 
-import com.devsu.client.DTO.ClientReportDto;
 import com.devsu.client.DTO.ClientRequestDto;
 import com.devsu.client.DTO.ClientResponseDto;
 import com.devsu.client.DTO.GenericMessageResponseDto;
-import com.devsu.client.entity.Client;
 import com.devsu.client.service.ClientService;
 import jakarta.validation.Valid;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

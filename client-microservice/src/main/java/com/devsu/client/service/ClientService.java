@@ -3,7 +3,6 @@ package com.devsu.client.service;
 import com.devsu.client.DTO.ClientRequestDto;
 import com.devsu.client.DTO.ClientResponseDto;
 import com.devsu.client.DTO.GenericMessageResponseDto;
-import com.devsu.client.entity.Client;
 
 import java.util.List;
 

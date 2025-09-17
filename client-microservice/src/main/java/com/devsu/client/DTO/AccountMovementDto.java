@@ -1,6 +1,5 @@
 package com.devsu.client.DTO;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import java.math.BigDecimal;

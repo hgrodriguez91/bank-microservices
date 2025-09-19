@@ -1,4 +1,4 @@
-package com.devsu.client.exception;
+package com.devsu.account.exception;
 
 import feign.FeignException;
 import io.swagger.v3.oas.annotations.Hidden;
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.util.HashMap;
 import java.util.Map;
 
-@RestControllerAdvice
 @Hidden
+@RestControllerAdvice
 public class CustomExceptionHandler {
 
     @ExceptionHandler(NotFoundException.class)

@@ -20,7 +20,7 @@ public class ClientReportDto {
     @JsonProperty("Cliente")
     private String client;
     @JsonProperty("Numero Cuenta")
-    private Long accountNumber;
+    private String accountNumber;
     @JsonProperty("Tipo")
     private String accountType;
     @JsonProperty("Saldo Inicial")

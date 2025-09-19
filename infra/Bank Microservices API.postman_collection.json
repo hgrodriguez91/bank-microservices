@@ -1,0 +1,1452 @@
+{
+	"info": {
+		"_postman_id": "c07580c0-3239-48a6-8f85-6ca664f76dce",
+		"name": "Bank Microservices API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28915909",
+		"_collection_link": "https://orange-escape-252648.postman.co/workspace/Team-Workspace~4d2ff947-2887-4f27-80b6-a95188ca3d55/collection/28915909-c07580c0-3239-48a6-8f85-6ca664f76dce?action=share&source=collection_link&creator=28915909"
+	},
+	"item": [
+		{
+			"name": "cuentas",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Account By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cuentas/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuentas",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6023",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cuentas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cuentas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "update Account",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cuentas/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuentas",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6023",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/cuentas/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cuentas",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "reportes",
+					"item": [
+						{
+							"name": "{clientId}",
+							"item": [
+								{
+									"name": "get Account Transactions",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cuentas/reportes/:clientId?fechaInicial=1950-01-21T18:59:33.543Z&fechaFinal=1950-01-21T18:59:33.543Z",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cuentas",
+												"reportes",
+												":clientId"
+											],
+											"query": [
+												{
+													"key": "fechaInicial",
+													"value": "1950-01-21T18:59:33.543Z",
+													"description": "(Required) "
+												},
+												{
+													"key": "fechaFinal",
+													"value": "1950-01-21T18:59:33.543Z",
+													"description": "(Required) "
+												}
+											],
+											"variable": [
+												{
+													"key": "clientId",
+													"value": "6023",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/cuentas/reportes/:clientId?fechaInicial=1950-01-21T18:59:33.543Z&fechaFinal=1950-01-21T18:59:33.543Z",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cuentas",
+														"reportes",
+														":clientId"
+													],
+													"query": [
+														{
+															"key": "fechaInicial",
+															"value": "1950-01-21T18:59:33.543Z",
+															"description": "(Required) "
+														},
+														{
+															"key": "fechaFinal",
+															"value": "1950-01-21T18:59:33.543Z",
+															"description": "(Required) "
+														}
+													],
+													"variable": [
+														{
+															"key": "clientId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"transactionDate\": \"1979-05-19T19:48:52.307Z\",\n    \"accountNumber\": \"string\",\n    \"accountType\": \"string\",\n    \"initialAmount\": 194.6558796664144,\n    \"transactionAmount\": 4285.301906203953,\n    \"resultantAmount\": 5163.393904212299,\n    \"status\": true\n  },\n  {\n    \"transactionDate\": \"1955-03-11T14:55:41.945Z\",\n    \"accountNumber\": \"string\",\n    \"accountType\": \"string\",\n    \"initialAmount\": 6485.022447091035,\n    \"transactionAmount\": 3672.0798730730776,\n    \"resultantAmount\": 8186.495124714397,\n    \"status\": true\n  }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cliente",
+					"item": [
+						{
+							"name": "{clientId}",
+							"item": [
+								{
+									"name": "get All Client Accounts",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/cuentas/cliente/:clientId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"cuentas",
+												"cliente",
+												":clientId"
+											],
+											"variable": [
+												{
+													"key": "clientId",
+													"value": "6023",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/cuentas/cliente/:clientId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"cuentas",
+														"cliente",
+														":clientId"
+													],
+													"variable": [
+														{
+															"key": "clientId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"accountNumber\": \"string\",\n    \"accountType\": \"string\",\n    \"clientId\": 1708,\n    \"id\": 7879,\n    \"initialAmount\": 6538.747408727716,\n    \"status\": false\n  },\n  {\n    \"accountNumber\": \"string\",\n    \"accountType\": \"string\",\n    \"clientId\": 9649,\n    \"id\": 7559,\n    \"initialAmount\": 9743.967570997145,\n    \"status\": true\n  }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Obtener todas las cuentas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/cuentas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Lista de cuentas obtenida correctamente",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cuentas",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"accountNumber\": \"string\",\n    \"accountType\": \"string\",\n    \"clientId\": 1708,\n    \"id\": 7879,\n    \"initialAmount\": 6538.747408727716,\n    \"status\": false\n  },\n  {\n    \"accountNumber\": \"string\",\n    \"accountType\": \"string\",\n    \"clientId\": 9649,\n    \"id\": 7559,\n    \"initialAmount\": 9743.967570997145,\n    \"status\": true\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "create Account",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/cuentas",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"cuentas"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/cuentas",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cuentas"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"accountNumber\": \"string\",\n  \"accountType\": \"string\",\n  \"clientId\": 8727,\n  \"id\": 9256,\n  \"initialAmount\": 5580.4010366015345,\n  \"status\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "movimientos",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Transaction By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/movimientos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimientos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6023",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/movimientos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"movimientos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 5526,\n  \"transactionDate\": \"1965-07-27T21:51:44.357Z\",\n  \"transactionType\": \"string\",\n  \"transactionAmount\": 4137.878118108735,\n  \"resultAmount\": 8808.869714561211,\n  \"accountId\": 691,\n  \"accountNumber\": \"string\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update Transaction",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"accountId\": 4410,\n  \"transactionAmount\": 8279.411577820163,\n  \"transactionDate\": \"2021-08-27T17:20:17.873Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/movimientos/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimientos",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6023",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"accountId\": 4410,\n  \"transactionAmount\": 8279.411577820163,\n  \"transactionDate\": \"2021-08-27T17:20:17.873Z\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/movimientos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"movimientos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 5526,\n  \"transactionDate\": \"1965-07-27T21:51:44.357Z\",\n  \"transactionType\": \"string\",\n  \"transactionAmount\": 4137.878118108735,\n  \"resultAmount\": 8808.869714561211,\n  \"accountId\": 691,\n  \"accountNumber\": \"string\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "cuentas",
+					"item": [
+						{
+							"name": "{accountId}",
+							"item": [
+								{
+									"name": "get All Account Transactions",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/movimientos/cuentas/:accountId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"movimientos",
+												"cuentas",
+												":accountId"
+											],
+											"variable": [
+												{
+													"key": "accountId",
+													"value": "6023",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [
+													{
+														"key": "Accept",
+														"value": "*/*"
+													}
+												],
+												"url": {
+													"raw": "{{baseUrl}}/movimientos/cuentas/:accountId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"movimientos",
+														"cuentas",
+														":accountId"
+													],
+													"variable": [
+														{
+															"key": "accountId"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": "[\n  {\n    \"id\": 3884,\n    \"transactionDate\": \"1988-11-02T20:08:53.845Z\",\n    \"transactionType\": \"string\",\n    \"transactionAmount\": 2471.9436023464004,\n    \"resultAmount\": 4772.870774926876,\n    \"accountId\": 4474,\n    \"accountNumber\": \"string\"\n  },\n  {\n    \"id\": 6137,\n    \"transactionDate\": \"1962-11-20T12:28:54.389Z\",\n    \"transactionType\": \"string\",\n    \"transactionAmount\": 8782.90490478678,\n    \"resultAmount\": 9592.67940203974,\n    \"accountId\": 7641,\n    \"accountNumber\": \"string\"\n  }\n]"
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Transactions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/movimientos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/movimientos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 3884,\n    \"transactionDate\": \"1988-11-02T20:08:53.845Z\",\n    \"transactionType\": \"string\",\n    \"transactionAmount\": 2471.9436023464004,\n    \"resultAmount\": 4772.870774926876,\n    \"accountId\": 4474,\n    \"accountNumber\": \"string\"\n  },\n  {\n    \"id\": 6137,\n    \"transactionDate\": \"1962-11-20T12:28:54.389Z\",\n    \"transactionType\": \"string\",\n    \"transactionAmount\": 8782.90490478678,\n    \"resultAmount\": 9592.67940203974,\n    \"accountId\": 7641,\n    \"accountNumber\": \"string\"\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "create Transaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"accountId\": 4410,\n  \"transactionAmount\": 8279.411577820163,\n  \"transactionDate\": \"2021-08-27T17:20:17.873Z\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/movimientos",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"movimientos"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"accountId\": 4410,\n  \"transactionAmount\": 8279.411577820163,\n  \"transactionDate\": \"2021-08-27T17:20:17.873Z\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/movimientos",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"movimientos"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 5526,\n  \"transactionDate\": \"1965-07-27T21:51:44.357Z\",\n  \"transactionType\": \"string\",\n  \"transactionAmount\": 4137.878118108735,\n  \"resultAmount\": 8808.869714561211,\n  \"accountId\": 691,\n  \"accountNumber\": \"string\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "clientes",
+			"item": [
+				{
+					"name": "{id}",
+					"item": [
+						{
+							"name": "get Client By Id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clientes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clientes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3728",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 8916,\n  \"clientId\": \"string\",\n  \"name\": \"string\",\n  \"gender\": \"string\",\n  \"age\": 271,\n  \"identification\": \"string\",\n  \"address\": \"string\",\n  \"phone\": \"string\",\n  \"status\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "update Client",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"age\": 4170,\n  \"gender\": \"string\",\n  \"identification\": \"string\",\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"address\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/clientes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clientes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3728",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"age\": 4170,\n  \"gender\": \"string\",\n  \"identification\": \"string\",\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"address\": \"string\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"id\": 8916,\n  \"clientId\": \"string\",\n  \"name\": \"string\",\n  \"gender\": \"string\",\n  \"age\": 271,\n  \"identification\": \"string\",\n  \"address\": \"string\",\n  \"phone\": \"string\",\n  \"status\": true\n}"
+								}
+							]
+						},
+						{
+							"name": "delete Client",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clientes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clientes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3728",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"string\"\n}"
+								}
+							]
+						},
+						{
+							"name": "change Status",
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clientes/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clientes",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "3728",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "*/*"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/clientes/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"clientes",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": "{\n  \"message\": \"string\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "get All Clients",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/clientes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/clientes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"id\": 9673,\n    \"clientId\": \"string\",\n    \"name\": \"string\",\n    \"gender\": \"string\",\n    \"age\": 3525,\n    \"identification\": \"string\",\n    \"address\": \"string\",\n    \"phone\": \"string\",\n    \"status\": true\n  },\n  {\n    \"id\": 6721,\n    \"clientId\": \"string\",\n    \"name\": \"string\",\n    \"gender\": \"string\",\n    \"age\": 4788,\n    \"identification\": \"string\",\n    \"address\": \"string\",\n    \"phone\": \"string\",\n    \"status\": false\n  }\n]"
+						}
+					]
+				},
+				{
+					"name": "create Client",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"age\": 4170,\n  \"gender\": \"string\",\n  \"identification\": \"string\",\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"address\": \"string\"\n}",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/clientes",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"clientes"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"age\": 4170,\n  \"gender\": \"string\",\n  \"identification\": \"string\",\n  \"name\": \"string\",\n  \"password\": \"string\",\n  \"phone\": \"string\",\n  \"address\": \"string\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/clientes",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"clientes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n  \"id\": 8916,\n  \"clientId\": \"string\",\n  \"name\": \"string\",\n  \"gender\": \"string\",\n  \"age\": 271,\n  \"identification\": \"string\",\n  \"address\": \"string\",\n  \"phone\": \"string\",\n  \"status\": true\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reportes",
+			"item": [
+				{
+					"name": "get Transaction Client Report",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/reportes?fechaInicial=1978-07-17&fechaFinal=1978-07-17&client=3728",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"reportes"
+							],
+							"query": [
+								{
+									"key": "fechaInicial",
+									"value": "1978-07-17",
+									"description": "(Required) "
+								},
+								{
+									"key": "fechaFinal",
+									"value": "1978-07-17",
+									"description": "(Required) "
+								},
+								{
+									"key": "client",
+									"value": "3728",
+									"description": "(Required) "
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/reportes?fechaInicial=1978-07-17&fechaFinal=1978-07-17&client=3728",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"reportes"
+									],
+									"query": [
+										{
+											"key": "fechaInicial",
+											"value": "1978-07-17",
+											"description": "(Required) "
+										},
+										{
+											"key": "fechaFinal",
+											"value": "1978-07-17",
+											"description": "(Required) "
+										},
+										{
+											"key": "client",
+											"value": "3728",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": "[\n  {\n    \"Fecha\": \"2012-03-17T23:37:46.783Z\",\n    \"Cliente\": \"string\",\n    \"Numero Cuenta\": \"string\",\n    \"Tipo\": \"string\",\n    \"Saldo Inicial\": 4285.976899679331,\n    \"Estado\": false,\n    \"Movimiento\": 8146.60355690886,\n    \"Saldo Disponible\": 1894.1123542774574\n  },\n  {\n    \"Fecha\": \"1991-02-19T05:12:33.489Z\",\n    \"Cliente\": \"string\",\n    \"Numero Cuenta\": \"string\",\n    \"Tipo\": \"string\",\n    \"Saldo Inicial\": 5278.554136710454,\n    \"Estado\": false,\n    \"Movimiento\": 6596.852204828352,\n    \"Saldo Disponible\": 7169.965755012122\n  }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}

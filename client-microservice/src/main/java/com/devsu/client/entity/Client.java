@@ -17,7 +17,7 @@ public class Client extends Person {
 
     @PrePersist
     public void generateClientId() {
-        if (this.clientId == null) {
+        if (this.clientId == null || this.clientId.isEmpty()) {
             this.clientId = java.util.UUID.randomUUID().toString();
         }
     }

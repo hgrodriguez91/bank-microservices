@@ -1,4 +1,4 @@
-package com.devsu.client.DTO;
+package com.devsu.account.DTO;
 
 import lombok.*;
 
@@ -10,8 +10,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Builder
-public class AccountMovementDto {
-
+public class AccountTransactionDto {
     private Date transactionDate;
     private String accountNumber;
     private String accountType;

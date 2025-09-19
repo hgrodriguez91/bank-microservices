@@ -13,7 +13,7 @@ Este proyecto contiene dos microservicios (`client-service` y `account-service`)
 ├── account-service
 │   └── src
 ├── infra
-│   └── create-db.sql       # Script para crear base de datos y datos de prueba
+│   └── BaseDatos.sql       # Script para crear base de datos y datos de prueba
 └── docker-compose.yml
 ```
 ---
